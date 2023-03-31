@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+        'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* navbar  */
+.navbar {
+    /* height: 100vh; */
+    width: 100%;
+    background: rgb(10, 67, 139);
+    font-family: sans-serif;
+    position: relative;
+    /* border:2px solid red;  */
+}
+
+nav {
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(10, 67, 139);
+    /* border:2px solid red; */
+}
+
+.logo {
+    width: 100px;
+    cursor: pointer;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+nav ul li a:hover {
+    color: #ff4321;
+    /* border:2px solid red; */
+
+}
+
+#english {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* banner */
+.banner {
+    /* width: 100%; */
+    height: 500px;
+    background-image: url(https://forever.travel-assets.com/flex/flexmanager/images/2021/06/25/TVLY_SeizeYourSomeday_lpheroB_1680x945_20210623.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border: 1px solid rgb(255, 255, 255);
+    display: block;
+}
+
+/* float part */
+#float {
+    width: 70%;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+    background-color: white;
+    color: rgb(10, 67, 139);
+    /* margin-top:-300px; */
+    height: 300px;
+    /* border: 2px solid red */
+
+}
+
+/* ///// */
+.middle {
+    margin: auto;
+    border-radius: 5px;
+    width: 80%;
+    display: flex;
+    margin-top: 20px;
+    padding: 10;
+    gap: 20px;
+}
+
+.middle img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.middle a {
+    text-decoration: none;
+}
+
+.middle1 {
+    margin: auto;
+    border-radius: 5px;
+    width: 80%;
+    display: flex;
+    margin-top: 20px;
+    /* padding: 10; */
+    gap: 30px;
+}
+
+.middle1 img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.middle1 a {
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    margin-top: 20px;
+    gap: 30px;
+
+}
+
+.middle2 {
+    margin: auto;
+    border-radius: 5px;
+    width: 80%;
+    display: flex;
+    margin-top: 20px;
+    /* padding: 10; */
+    gap: 30px;
+}
+
+.middle2 img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.middle2 a {
+    text-decoration: none;
+}
+
+.middle2 h2 {
+    text-align: center;
+}
+
+.middle3 {
+    /* width: 100%; */
+    margin-left: 11%;
+    border-radius: 5px;
+    display: flex;
+    margin-top: 20px;
+    /* padding: 10; */
+    gap: 30px;
+}
+
+.middle3 img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.middle4 {
+    width: 80%;
+    margin: auto;
+    border-radius: 5px;
+    display: flex;
+    margin-top: 20px;
+    /* padding: 10; */
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.middle4 div {
+    border-style: groove;
+    padding: 2%;
+}
+
+.middle4 a {
+    text-decoration: none;
+}
+
+.qr img {
+    width: 80%;
+    margin: auto;
+    border-radius: 5px;
+    display: flex;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.footer img {
+    width: 80%;
+    margin: auto;
+    border-radius: 5px;
+    display: flex;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.footer1 img {
+    width: 80%;
+    margin: auto;
+    border-radius: 5px;
+    display: flex;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#menu {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 30px;
+    margin-top: 2px;
+    display: flex;
+    justify-content: center;
+}
+
+#menu a:hover {
+    color: #ff6f61;
+
+}
+
+#menu ul {
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+#menu ul a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 32px;
+    padding: 0 15px;
+    font-weight: 500;
+    display: block;
+}
+
+#menu ul li {
+    float: left;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+#menu ul li:hover {
+    color: #ff6f61;
+}
+
+#menu ul ul {
+    position: absolute;
+    background: rgb(10, 67, 139);
+    top: 100%;
+    left: 0;
+    display: none;
+}
+
+#menu ul ul li {
+    float: none;
+    width: 220px;
+}
+
+#menu ul ul li:hover {
+    border-left: 3px solid white;
+}
+
+#menu ul ul ul {
+    left: 100%;
+    top: 0;
+
+}
+
+#menu ul li:hover>ul {
+    display: block;
+}
+
+#slideshow {
+    width: 80%;
+    margin: auto;
+    margin-top: 20PX;
+    /* margin-left: 75px; */
+    /* border: 2px solid red; */
+    /* margin-left:13%; */
+    border-radius: 5px;
+    display: flex;
+    margin-top: 20px;
+    /* padding: 10; */
+    gap: 30px;
+}
+
+#slideshow img {
+    width: 100%;
+    border-radius: 50px;
+
+}
+
+.stays{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content:space-around;
+    /* border-style:groove; */
+    padding: 7%;
+}
+.stays div input{
+    width: 100%;
+    height: 30px;
+    border-style: solid;
+    padding: 2%;
+    border-radius: 5px;
+}
+#check{
+    margin-top: -20px;
+    display: flex;
+    gap: 10px;
+    padding: 1%;
+    border: none;
+    /* border-radius: 5px; */
+}
+#search a button{
+    background-color: rgb(10,67,139);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    width: 10%;
+    height: 30px;
+}
+#search{
+    margin-top: -20px;
+}

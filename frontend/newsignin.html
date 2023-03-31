@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./newsignin.css">
+    <title>Login Page</title>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+
+            <form id="signUp">
+                <h1>Create Account</h1>
+                <span>or use your email for registration</span>
+                <input type="text" id="name" placeholder="First Name" required />
+                <input type="text" id="lastname" placeholder="Last Name" required />
+                <input type="email" id="email" placeholder="Email" required />
+                <input type="number" id="mobile" placeholder="Phone no.">
+                <input type="password" id="password" placeholder="Password" required />
+                <input type="password" id="checkpassword" placeholder="Confirm Your Password" required />
+                <input type="Submit" class="submit">
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+
+            <form id="signIn">
+                <h2 id="display"></h2>
+                <h1>Sign in</h1>
+                <span>or use your account</span>
+                <input type="email" id="email1" placeholder="Email" required />
+                <input type="password1" id="password1" placeholder="Password" required />
+                <a href="#">Forgot your password?</a>
+                <input type="Submit" class="submit" id="submit">
+                <a id="admin" href="adminlogin.html">Login Admin Here</a>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+
+                    <img src="" alt="">
+                    <h1>Hello, Friend!</h1>
+                    <div class="logo"><img src="https://www.travelocity.com/_dms/header/logo.svg?locale=es_MX&siteid=80001&2" alt="" class="logo">
+                    </div>
+                    <p>Enter your personal details and start journey with us</p>
+                    <h5>Already have account</h5>
+                    <button class="ghost" id="signin">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+
+                    <h1>Welcome Back!</h1>
+                    <div class="logo"><img src="https://www.travelocity.com/_dms/header/logo.svg?locale=es_MX&siteid=80001&2" alt="" class="logo">
+
+
+                    </div>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <h5>Register Yourself</h5>
+                    <button class="ghost" id="signup">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script src="./newsignin.js"></script>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
