@@ -64,38 +64,6 @@ signIn.addEventListener("submit", (e) => {
 });
 
 
-
-////signin
-// function CheckEmployee(email, pass) {
-//   fetch(`http://localhost:4444/user/login`)
-  
-//     .then((res) => res.json())
-//     .then((data) => {
-//       console.log(data);
-//       if (check(data, email, pass)) {
-//         Swal.fire({
-//           position: "top",
-//           icon: "success",
-//           title: "Login Successfully",
-//           showConfirmButton: false,
-//           timer: 1500,
-//         });
-
-//         setTimeout(() => {
-//           window.location.href = "index.html";
-//         }, 1000);
-//       } else {
-//         Swal.fire({
-//           icon: "error",
-//           title: "Oops...",
-//           text: "Wrong Credentials",
-//           footer:
-//             '<a href="">The email address or password you entered isnt match </a>',
-//         });
-//       }
-//     });
-// }
-
 let myform=document.getElementById("signIn")
 myform.addEventListener("submit",(e)=>{
 e.preventDefault();

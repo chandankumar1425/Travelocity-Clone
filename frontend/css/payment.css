@@ -1,0 +1,166 @@
+/* #payment{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+} */
+
+#mainpaymentDiv{
+    margin: auto;
+    width: 630px;
+    /* border: 1px solid black; */
+    margin-left: 90px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: white;
+    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;   
+}
+#firstDiv{
+    line-height: 40px;
+    border: 0.5px solid rgb(216, 214, 214);
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+#innerDiv{
+    display: flex;
+    color: green;
+    font-size: 20px;
+}
+#bankOfferimg{
+    width:5%;
+    margin-right: 15px;
+}
+#choosepmtmode{
+    color: rgb(83, 11, 216);
+}
+
+#secDiv{
+    border: 0.5px solid rgb(216, 214, 214);
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+#paymentMode{
+
+    width: 40%;
+    /* border: 1px solid red; */
+}
+#paymentMode>div{
+    padding-left: 10px;
+    border: 1px solid rgb(211, 211, 211);
+    display: flex;
+    align-items: center;
+    height: 65px;
+    background-color: rgb(240, 240, 240);
+   cursor: pointer;
+    font-weight: 600;
+    
+}
+
+#paymentMode>div>img{
+    width: 12%;
+    margin-right: 10px;
+}
+
+#content{
+    border: 0.5px solid rgb(216, 214, 214);
+    height: 90%;
+    width: 59%;
+}
+
+.mode {
+    display: none;
+  }
+
+  .mode.active {
+    display: block;    
+  }
+
+  #mode1{
+    padding-left: 20px;
+  }
+  #codheading{
+    
+    color: rgb(68, 66, 66);
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #captchacontainer{
+    display: flex;
+    margin-bottom: 20px;
+    
+  }
+  #captcha-canvas{
+   
+    padding-top: 20px;
+    padding-left: 30px;
+    width: 150px;
+    height: 50px;
+    border: 1px solid grey;
+    border-radius: 5px;
+  }
+#refreshimg{
+    width: 10%;
+    cursor: pointer;
+    margin-left: 20px;
+}
+#otpInput{
+    height: 35px;
+    width: 94%;
+    /* padding-left: 10px; */
+    text-align: center;
+    margin-bottom: 20px;
+    outline: none;
+}
+#placeOrder{
+    height: 50px;
+    width: 94%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    background-color:rgb(10, 67, 139);
+    color: white;
+    outline: none;
+    border: none;
+    border-radius:5px;
+    cursor: pointer;
+}
+
+#thirddiv{
+    border: 0.5px solid rgb(216, 214, 214);
+    margin-top: 20px;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#giftcontainer{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    /* padding-left: 3px; */
+    /* border: 1px solid green */
+}
+#giftcontainer>p{
+    font-weight:600 ;
+    color:rgb(10, 67, 139);
+}
+#giftcard{
+    width: 13%;
+}
+#giftLine{
+    border: 0.5px solid rgb(216, 214, 214);
+    height: 100%;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#giftLine>a{
+
+    text-decoration: none;
+    color: rgb(10, 67, 139);
+    font-weight: 600;
+}

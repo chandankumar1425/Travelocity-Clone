@@ -1,18 +1,14 @@
 const mongoose=require("mongoose")
 
 const postsSchema= mongoose.Schema({
-
     title : String,
     body : String,
-    device : String,
-    no_of_comments : Number,
-    userID: String
+    location : String,
+    price : Number  
 },
 { versionKey: false })
 
-const PostsModel=mongoose.model("linkedinpost", postsSchema)
+const PostsModel=mongoose.model("hotels", postsSchema)
 
 
-module.exports={
-    PostsModel
-}
+module.exports={PostsModel}

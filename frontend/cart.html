@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart Page</title>
+  <style>
+    #cart-container {
+      /* border: 2px solid red; */
+      margin-top: 50px;
+      width: 90%;
+      display: grid;
+      grid-gap: 20px;
+      justify-content: center;
+    }
+
+    #cart-container>div {
+      width: 100%;
+      /* border: 2px solid red; */
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      padding: 10px;
+      margin-top: 20px;
+
+    }
+
+    #cart-container>div>img {
+      width: 100%;
+
+    }
+
+    #cart-container>div>button {
+      background-color: rgb(10, 67, 139);
+      color: white;
+      padding: 5px;
+      border: none;
+      border-radius: 3px;
+      margin: 10px;
+    }
+
+    #total {
+      color: rgb(10, 67, 139);
+      margin: auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+      /* border-style: dashed; */
+      width: 100%;
+    }
+
+    .third {
+      margin: auto;
+      width: 80%;
+      /* border: 2px solid red; */
+      /* display: flex; */
+      justify-content: space-around;
+    }
+
+    .third a {
+      text-decoration: none;
+
+    }
+
+    .frame{ 
+      /* margin-top: 50%; */
+      width: 80%;
+      margin: auto;
+      display: flex;     
+      /* justify-content: space-between; */
+      /* border: 2px solid red; */
+
+    }
+    .button{
+      padding: 2%;
+      
+      color:rgb(10, 67, 139 );
+      background-color:white;
+      border-radius: 5px;
+
+    }
+  </style>
+</head>
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page</title>
+  <link rel="icon" type="image/png" href="https://tse2.mm.bing.net/th?id=OIP.k9OqHpM5TW5hIa0QZJcQqgAAAA&pid=Api&P=0">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/productpage.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="https://kit.fontawesome.com/4052196a9f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <div class="navbar">
+    <nav>
+      <a href="./index.html"><img src="https://www.travelocity.com/_dms/header/logo.svg?locale=es_MX&siteid=80001&2"
+          alt="" class="logo"></a>
+      <ul>
+        <div id="menu">
+          <ul>
+            <!-- 1st -->
+            <li>
+              <a href="">More Travel <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+              <ul id="a">
+                <li><a href="">Packges</a></li>
+                <li><a href="./index.html">Stays</a></li>
+                <li><a href="">Cars</a></li>
+                <li><a href="">Flights</a></li>
+                <li><a href="">Curies</a></li>
+                <li><a href="">Things to do</a></li>
+                <li><a href="">Tips for me</a></li>
+                <li><a href="">Discover</a></li>
+                <li><a href="">Travel Deals</a></li>
+                <li><a href="">Get Inspired</a></li>
+                <li><a href="">Group & meetings</a></li>
+              </ul>
+            </li>
+            <li><a href="">English</a></li>
+            <li><a href="">List your property</a></li>
+            <li><a href="">Support</a></li>
+            <li><a href="">Trips</a></li>
+            <li><a href="./productpage.html"><i class="fa-solid fa-circle-chevron-left"></i></a></a></li>
+          </ul>
+    </nav>
+  </div>
+
+  </div>
+
+    <div class="frame">
+      <div id="cart-container"></div>
+      <div class="third">
+        
+        <div><h1 id="total">Your Total Room Price is for one night only:- <span id="cart-total">0</span></h1></div>
+        <div><a href="./payment.html"><h1 id="total"><button class="button"><b> Proceed to Payment</b></button></h1></a></div>
+</div>
+      
+        <!-- Here Append All the cart Products  -->
+      </div>
+    </div>
+  </body>
+  <script>
+    // Write all necessery JS here
+    let Cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let Container = document.getElementById("cart-container");
+    function DisplayProduct(data) {
+      let total = document.getElementById("cart-total")
+      Container.innerHTML = "";
+      Cart.forEach((product) => {
+        let card = document.createElement("div");
+        let image = document.createElement("img");
+        let brand = document.createElement("h3");
+        let category = document.createElement("p");
+        let details = document.createElement("p");
+        let quantity = document.createElement("span");
+        let price = document.createElement("h4");
+        let SelectedAnather = document.createElement("button");
+        let Increment = document.createElement("button");
+        let Decrement = document.createElement("button");
+        quantity.textContent = product.quantity
+        SelectedAnather.textContent = "SelectedAnather";
+        Increment.textContent = "Travellers+"
+        Decrement.textContent = "Travellers-"
+        image.src = product.img;
+        brand.textContent = product.brand;
+        category.textContent = product.category;
+        price.textContent = `₹${product.price}`;
+        details.textContent = product.details;
+        SelectedAnather.addEventListener("click", () => {
+          Cart = Cart.filter((ele) => {
+            return ele.id !== product.id
+          })
+          localStorage.setItem("cart", JSON.stringify(Cart))
+          DisplayProduct()
+          window.location.href = "./productpage.html"
+        });
+        Increment.addEventListener("click", () => {
+          product = product.quantity++
+          localStorage.setItem("cart", JSON.stringify(Cart))
+          DisplayProduct()
+        });
+        Decrement.addEventListener("click", () => {
+          if (product.quantity > 1) {
+            product = product.quantity--
+            localStorage.setItem("cart", JSON.stringify(Cart))
+            DisplayProduct()
+          }
+        });
+        card.append(image, brand, price, details, category, Increment, quantity, Decrement, SelectedAnather);
+        Container.append(card);
+      });
+
+      let sum = 0
+      for (let i = 0; i < Cart.length; i++) {
+        sum += Cart[i].price * Cart[i].quantity
+      }
+      total.textContent = sum
+
+    }
+    DisplayProduct()
+
+
+
+
+
+  </script>
+
+</html>

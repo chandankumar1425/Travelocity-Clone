@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/cart.css">
+    <link rel="stylesheet" href="./css/address.css">
+    <link rel="stylesheet" href="./css/payment.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://kit.fontawesome.com/4052196a9f.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.7/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.7/dist/sweetalert2.min.css">
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+          <a href="./index.html"><img src="https://www.travelocity.com/_dms/header/logo.svg?locale=es_MX&siteid=80001&2"
+              alt="" class="logo"></a>
+          <ul>
+            <div id="menu">
+              <ul>
+                <!-- 1st -->
+                <li>
+                  <a href="">More Travel <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                  <ul id="a">
+                    <li><a href="">Packges</a></li>
+                    <li><a href="./index.html">Stays</a></li>
+                    <li><a href="">Cars</a></li>
+                    <li><a href="">Flights</a></li>
+                    <li><a href="">Curies</a></li>
+                    <li><a href="">Things to do</a></li>
+                    <li><a href="">Tips for me</a></li>
+                    <li><a href="">Discover</a></li>
+                    <li><a href="">Travel Deals</a></li>
+                    <li><a href="">Get Inspired</a></li>
+                    <li><a href="">Group & meetings</a></li>
+                  </ul>
+                </li>
+                <li><a href="">English</a></li>
+                <li><a href="">List your property</a></li>
+                <li><a href="">Support</a></li>
+                <li><a href="">Trips</a></li>
+                <li><a href="./cart.html"><i class="fa-solid fa-circle-chevron-left"></i></a></a></li>
+              </ul>
+        </nav>
+      </div>
+    
+      </div>
+    <!-- ------------------payment page----------------- -->
+    <div id="mainpaymentDiv">
+        <div id="firstDiv">
+            <div id="innerDiv">
+                <img id="bankOfferimg" src="./LOGO/bankoffer.png" alt="Bank offer">
+                <h4>Bank Offer</h4>
+            </div>
+            <p>10% Instant Discount on YES Bank Credit Card on a min spend of Rs 3,000. TCA</p>           
+        </div>
+
+        <h3 id="choosepmtmode">CHOOSE PAYMENT MODE</h3>
+        <div id="secDiv">
+            <div id="paymentMode">
+                <div onclick="showPage('mode1')">
+                    <img src="./LOGO/cod.png" alt="">
+                    <p>Cash On Delivery</p>
+                </div>
+
+                <div onclick="showPage('mode2')">
+                    <img src="./LOGO/creditcard.png" alt="">
+                    <p>Credit/Debit Card</p>
+                </div>
+
+                <div onclick="showPage('mode3')">
+                    <img src="./LOGO/upi.png" alt="">
+                    <p>PhonePe/Google Pay/BHIM UPI</p>
+                </div>
+
+                <div onclick="showPage('mode4')">
+                    <img src="./LOGO/wallet.png" alt="">
+                    <p>Paytm/Wallets</p>
+                </div>
+
+                <div onclick="showPage('mode5')"  >
+                    <img src="./LOGO/banking.png" alt="">
+                    <p>Net Banking</p>
+                </div>
+                
+
+            </div>
+
+            <div id="content">
+                <div class="mode active" id="mode1">
+
+                    <h3 id="codheading">Cash On Delivery (Cash/UPI)</h3>
+                    <div id="captchacontainer">
+                        <!-- <div id="captcha"></div> 
+                        -->
+                        <canvas id="captcha-canvas"></canvas>
+                        <img id="refreshimg" src="./LOGO/refershicon.png" alt="">
+                    </div>
+
+                    <div>
+                        <input type="text" placeholder="Enter the code shown in the above" id="otpInput">
+                    </div>
+                    <p >You can pay via Cash/UPI on delivery</p>
+                    <button id="placeOrder">
+                        PLACE ORDER
+                    </button>
+
+                </div>
+
+                <div class="mode" id="mode2">
+                    <h1>Credit/Debit Card</h1>
+                </div>
+
+                <div  class="mode" id="mode3">
+                    <h1>PhonePe/Google Pay/BHIM UPI</h1>
+                </div>
+
+                <div  class="mode" id="mode4">
+                    <h1>Paytm/Wallets</h1>
+                </div>
+
+                <div class="mode" id="mode5">
+                    <h1>Net Banking</h1>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="thirddiv">
+            
+                <div id="giftcontainer">
+                    <img id="giftcard" src="./LOGO/giftbox.jpg" alt="">
+                    <p id="p" >Have a Gift Card?</p>
+                </div>
+
+               <div id="giftLine">
+                <a  href="">APPLY GIFT CARD</a>
+               </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="allcards">
+        <div id="cardcontainer">
+            <div><img src="./LOGO/256bit.png" alt=""></div>
+            <div><img src="./LOGO/bluecard.png" alt=""></div>
+            <div><img src="./LOGO/bhim.png" alt=""></div>
+            <div><img src="./LOGO/cashdel.png" alt=""></div>
+            <div><img src="./LOGO/mastercard.png" alt=""></div>
+            <div><img src="./LOGO/netbanking.png" alt=""></div>
+            <div><img src="./LOGO/paypal.png" alt=""></div>
+            <div><img src="./LOGO/rupay.png" alt=""></div>
+            <div><img src="./LOGO/visa.png" alt=""></div>
+            
+        </div>
+
+        <div id="needhelp">Need Help? Contact Us</div>
+    </div>
+
+
+    <script src="./scripts/payment.js"></script>
+    
+</body>
+</html>

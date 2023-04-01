@@ -11,7 +11,7 @@ const usersSchema= mongoose.Schema({
 },
 { versionKey: false })
 
-const UsersModel=mongoose.model("linkedinuser", usersSchema)
+const UsersModel=mongoose.model("profile", usersSchema)
 module.exports={
     UsersModel
 }

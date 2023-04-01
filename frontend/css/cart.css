@@ -1,0 +1,356 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(231, 231, 231);
+}
+#navbar{
+    display: flex;
+    background-color: rgb(213, 68, 68);
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    height: 70px; 
+    margin-bottom: 10px;
+    position: sticky; 
+    top: 0;   
+}
+
+#navbar>div{
+    width: 25%;
+}
+/* #div1{
+    border: 1px solid black;
+} */
+
+#brandlogo{
+    width: 25%;
+}
+
+#div2{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+#div2 a{
+    text-decoration: none;
+    font-weight: 600;
+    color: rgb(151, 151, 151);
+    
+}
+#div2 #bag{
+    /* color: white; */
+}
+
+#div3{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    color: white; 
+}
+#securelogo{
+    width: 10%;
+    margin-right: 15px;
+}
+/* ============================== Main Item Container ============================================ */
+#Shoppingbag{
+    margin-left: 35px;
+    text-align: center;
+    font-size: 30px;
+}
+#totalitem{
+    margin-left: 35px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+#main{  
+    display: grid;
+    grid-template-columns: 63% 35%; 
+    gap: 2%;
+    /* border: 1px solid black; */
+    
+    /* height: 250px; */
+    width: 95%;
+    margin: auto;
+    margin-bottom: 15px;
+    
+}
+
+#itemcontainer{   
+    /* border: 1px solid rgb(230, 9, 9); */
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    
+}
+
+/* #itemcontainer>div{
+    border: 2px solid rgb(20, 195, 20);
+} */
+
+#imagecontainer{
+    width: 30%;
+    cursor: pointer;
+    
+}
+#itemimage{
+    width: 100%;
+    border-radius: 5px;
+}
+
+#detailscontainer{
+    width: 65%;
+    line-height: 25px;
+    position: relative;
+    font-size: 18px;
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: 35px;
+}
+#titleline{
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+#title{
+    color: rgb(22, 18, 224);
+    
+    
+}
+#outofStock{
+    color: red;
+}
+
+#quantityContainer{
+    display: flex;
+   
+}
+#updownarrow{
+    line-height: 0;
+    text-align: center;
+    margin-top: 2px;
+}
+#updownarrow>img{
+    width: 12%; 
+    cursor: pointer; 
+    
+}
+
+#Remove{
+    border: none;
+    cursor: pointer;
+    /* height: 30px; */
+    width: 120px;
+    background-color: brown;
+    color: white;
+    font-weight: 600;
+    font-size: 17px;
+    border-radius: 5px;
+}
+#Remove:hover{
+    background-color: rgb(63, 42, 165);
+    color: black;
+}
+#price{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(179, 179, 3);
+}
+#checkbox{   
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 20px;
+    width: 20px;   
+}
+#checkbox:checked{
+    background-color: brown;
+
+}
+/* ===============================  Subtotal Container  ========================================= */
+
+
+#subtotalcontainer{
+    /* border: 1px solid rgb(57, 21, 216); */
+    background-color: white;
+    position: fixed; 
+    top: 152px;
+    right: 32px;
+    width: 420px;
+    height: 400px; 
+    padding-left: 20px; 
+    padding-right: 20px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   
+}
+#line1{
+    padding-top: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    color: rgb(52, 51, 51);   
+}
+#line2{
+    font-size: 14px;
+    color: rgb(255, 55, 0);
+    margin-top: 15px;
+}
+#line2checkbox{
+    margin-top: 10px;
+}
+#line3{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 10px;
+}
+#line3>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 25px;
+    border: 1px solid rgb(180, 175, 175);
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 600;  
+}
+#line4{
+    color: blue;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: 600; 
+}
+#line5{
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 800px;
+    color: rgb(46, 45, 45);
+}
+#line6_Billdiv{
+    margin-top: 10px;
+    color: rgb(83, 83, 83);
+    
+}
+#line6_Billdiv>div{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+#applycoupon{
+    color: red;
+}
+#free{
+    color: green;
+    font-size: 13px;
+}
+#totalamount{
+    margin-top: 20px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#placeorder{
+    margin-top: 25px;
+    background-color: brown;
+    border-radius: 3px;
+    height: 40px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+#placeorder>a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+#placeorder>a:hover{
+    /* color: brown;  */
+    font-size:13px;
+}
+
+
+/* ===========Media queries================= */
+@media (max-width:550px) {
+    #navbar{
+    display: flex;
+    background-color: rgb(222, 90, 18);
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    height: 70px;    
+    }
+    #div2{
+        display: none;
+    }   
+    #main{  
+        display: grid;
+        grid-template-columns: 1fr; 
+        gap: 10px;            
+    }
+    #totalitem{
+        margin-left: 35px;
+        text-align: center;
+    }
+    #quantityContainer{
+        display: grid;
+        grid-template-columns:auto auto;
+    }
+    #title{
+       
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    #price{       
+        top: 35px;
+        right: 20px;        
+    }
+    #Remove{       
+        height: 30px;      
+    }
+    #updownarrow>img{
+        width: 16%;        
+    }
+    /* ======== sub total ================= */
+    #subtotalcontainer{
+        border: 1px solid rgb(57, 21, 216);
+        /* background-color: blueviolet; */
+        position: static; 
+        padding: 10px;
+        width: 100%;       
+    }  
+    #placeorder{
+        position: sticky;
+        bottom: 0;   
+    }
+    
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
