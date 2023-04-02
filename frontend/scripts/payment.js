@@ -63,4 +63,7 @@ placeOrder.addEventListener("click",()=>{
     icon: 'success',
     
   });
+  setTimeout(() => {
+    window.location.href = "index.html";
+  }, 2000);
 })
