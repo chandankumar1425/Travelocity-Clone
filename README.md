@@ -1,9 +1,7 @@
 # lame-fairies-5020
 
-Comment on this file
-@@ -4,6 +4,11 @@
- This project is a clone of tevelocity.com which is an online travelling site.
 
+ This project is a clone of tevelocity.com which is an online travelling site.
 ----
 
 ## Author
@@ -13,9 +11,9 @@ linkedIn:-https://www.linkedin.com/in/kaushikchandan6372
 ## Tech Stack 
 The tech Stack we used for creating this webiste are:-
 + HTML
-@@ -16,3 +21,18 @@ The tech Stack we used for creating this webiste are:-
-## Landing Page
+
 -----
+## Landing PAge
 ![image](https://user-images.githubusercontent.com/118505620/229411451-3634a67d-4a45-46a5-89b7-37bf976c2d19.png)
 
 
