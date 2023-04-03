@@ -6,9 +6,9 @@
 ----
 
 ## Author
-Chandan Kumar Behera
-Github:-https://github.com/chandankumar1425
-linkedIn:-https://www.linkedin.com/in/kaushikchandan6372
+Chandan Kumar Behera.
+Github:-https://github.com/chandankumar1425.
+linkedIn:-https://www.linkedin.com/in/kaushikchandan6372.
 ## Tech Stack 
 The tech Stack we used for creating this webiste are:-
 + HTML
