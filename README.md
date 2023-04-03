@@ -1,9 +1,7 @@
 # lame-fairies-5020
-
-
+---
  This project is a clone of tevelocity.com which is an online travelling site.
 ----
-
 ## Author
 Chandan Kumar Behera
 Github:-https://github.com/chandankumar1425
@@ -11,9 +9,14 @@ linkedIn:-https://www.linkedin.com/in/kaushikchandan6372
 ## Tech Stack 
 The tech Stack we used for creating this webiste are:-
 + HTML
++ CSS
++ Javascript
++ Node JS
++ Express
++ MongoDB
 
+## Landing Page
 -----
-## Landing PAge
 ![image](https://user-images.githubusercontent.com/118505620/229411451-3634a67d-4a45-46a5-89b7-37bf976c2d19.png)
 
 
