@@ -1,4 +1,4 @@
-# lame-fairies-5020
+
 ---
  This project is a clone of tevelocity.com which is an online travelling site.
 ----
