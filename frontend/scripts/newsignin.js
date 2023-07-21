@@ -40,10 +40,10 @@ signUp.addEventListener("submit", (e) => {
 function signup() {
   let userObj = {
     name: signUp.name.value,
-    lastname:signUp.lastname.value,
+    lastname: signUp.lastname.value,
     email: signUp.email.value,
     password: signUp.password.value,
-    mobile:signUp.mobile.value
+    mobile: signUp.mobile.value
   };
   fetch(`http://localhost:4444/user/register`, {
     method: "POST",
@@ -64,38 +64,41 @@ signIn.addEventListener("submit", (e) => {
 });
 
 
-let myform=document.getElementById("signIn")
-myform.addEventListener("submit",(e)=>{
-e.preventDefault();
-let email=document.getElementById("email1").value
-let password=document.getElementById("password1").value
+let myform = document.getElementById("signIn")
+myform.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let email = document.getElementById("email1").value
+  let password = document.getElementById("password1").value
 
-let obj={
-    email:email,
-    password:password
-    
-}
-console.log(obj)
+  let obj = {
+    email: email,
+    password: password
 
-fetch("http://localhost:4444/user/login",{
-    method:'POST',
-    headers:{
-        "Content-type":"application/json"
+  }
+  console.log(obj)
+
+  fetch("http://localhost:4444/user/login", {
+    method: 'POST',
+    headers: {
+      "Content-type": "application/json"
     },
-    body:JSON.stringify(obj)
-})
-.then((res)=>{
-    return res.json();
-})
-.then((res)=>{
-    console.log(res);
-    localStorage.setItem("token",res.token);
-    window.location.href = "./index.html";
+    body: JSON.stringify(obj)
+  })
+    .then((res) => {
+      return res.json();
+    })
+    .then((res) => {
+      console.log(res);
+      localStorage.setItem("token", res.token);
+      setTimeout(() => {
+        window.location.href = "./index.html";
 
-})
-.catch((err)=>{
-console.log(err);
-})
+      }, 5000);
+
+    })
+    .catch((err) => {
+      console.log(err);
+    })
 
 })
 function check(data, email, pass) {

@@ -2,8 +2,6 @@ const express=require("express")
 const {PostsModel}=require("../model/posts.model")
 const postsRouter=express.Router()
 const jwt=require("jsonwebtoken")
-
-
 //add
 postsRouter.post("/add", async (req, res) => {
     const payload = req.body;
@@ -16,13 +14,6 @@ postsRouter.post("/add", async (req, res) => {
       
     }
   });
-
-
-
-
-
-
-
 
 //update
 postsRouter.patch("/update/:id", async (req,res) =>{

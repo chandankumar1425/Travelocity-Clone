@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cart Page</title>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
   <style>
     #cart-container {
       /* border: 2px solid red; */
@@ -62,20 +63,21 @@
 
     }
 
-    .frame{ 
+    .frame {
       /* margin-top: 50%; */
       width: 80%;
       margin: auto;
-      display: flex;     
+      display: flex;
       /* justify-content: space-between; */
       /* border: 2px solid red; */
 
     }
-    .button{
+
+    .button {
       padding: 2%;
-      
-      color:rgb(10, 67, 139 );
-      background-color:white;
+
+      color: rgb(10, 67, 139);
+      background-color: white;
       border-radius: 5px;
 
     }
@@ -132,82 +134,137 @@
 
   </div>
 
-    <div class="frame">
-      <div id="cart-container"></div>
-      <div class="third">
-        
-        <div><h1 id="total">Your Total Room Price is for one night only:- <span id="cart-total">0</span></h1></div>
-        <div><a href="./payment.html"><h1 id="total"><button class="button"><b> Proceed to Payment</b></button></h1></a></div>
-</div>
-      
-        <!-- Here Append All the cart Products  -->
+  <div class="frame">
+    <div id="cart-container"></div>
+    <div class="third">
+
+      <div>
+        <h1 id="total">Your Total Room Price is for one night only:- <span id="cart-total">0</span></h1>
+      </div>
+      <div>
+        <h1 id="total"><button class="button" id="total_price"><b> Proceed to Payment</b></button></h1>
       </div>
     </div>
-  </body>
-  <script>
-    // Write all necessery JS here
-    let Cart = JSON.parse(localStorage.getItem("cart")) || [];
-    let Container = document.getElementById("cart-container");
-    function DisplayProduct(data) {
-      let total = document.getElementById("cart-total")
-      Container.innerHTML = "";
-      Cart.forEach((product) => {
-        let card = document.createElement("div");
-        let image = document.createElement("img");
-        let brand = document.createElement("h3");
-        let category = document.createElement("p");
-        let details = document.createElement("p");
-        let quantity = document.createElement("span");
-        let price = document.createElement("h4");
-        let SelectedAnather = document.createElement("button");
-        let Increment = document.createElement("button");
-        let Decrement = document.createElement("button");
-        quantity.textContent = product.quantity
-        SelectedAnather.textContent = "SelectedAnather";
-        Increment.textContent = "Travellers+"
-        Decrement.textContent = "Travellers-"
-        image.src = product.img;
-        brand.textContent = product.brand;
-        category.textContent = product.category;
-        price.textContent = `₹${product.price}`;
-        details.textContent = product.details;
-        SelectedAnather.addEventListener("click", () => {
-          Cart = Cart.filter((ele) => {
-            return ele.id !== product.id
-          })
-          localStorage.setItem("cart", JSON.stringify(Cart))
-          DisplayProduct()
-          window.location.href = "./productpage.html"
-        });
-        Increment.addEventListener("click", () => {
-          product = product.quantity++
-          localStorage.setItem("cart", JSON.stringify(Cart))
-          DisplayProduct()
-        });
-        Decrement.addEventListener("click", () => {
-          if (product.quantity > 1) {
-            product = product.quantity--
-            localStorage.setItem("cart", JSON.stringify(Cart))
-            DisplayProduct()
-          }
-        });
-        card.append(image, brand, price, details, category, Increment, quantity, Decrement, SelectedAnather);
-        Container.append(card);
+
+    <!-- Here Append All the cart Products  -->
+  </div>
+  </div>
+</body>
+<script>
+  let price = 0
+  // Write all necessery JS here
+  let Cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let Container = document.getElementById("cart-container");
+  function DisplayProduct(data) {
+    let total = document.getElementById("cart-total")
+    Container.innerHTML = "";
+    Cart.forEach((product) => {
+      let card = document.createElement("div");
+      let image = document.createElement("img");
+      let brand = document.createElement("h3");
+      let category = document.createElement("p");
+      let details = document.createElement("p");
+      let quantity = document.createElement("span");
+      let price = document.createElement("h4");
+      let SelectedAnather = document.createElement("button");
+      let Increment = document.createElement("button");
+      let Decrement = document.createElement("button");
+      quantity.textContent = product.quantity
+      SelectedAnather.textContent = "SelectedAnather";
+      Increment.textContent = "Travellers+"
+      Decrement.textContent = "Travellers-"
+      image.src = product.img;
+      brand.textContent = product.brand;
+      category.textContent = product.category;
+      price.textContent = `₹${product.price}`;
+      details.textContent = product.details;
+      SelectedAnather.addEventListener("click", () => {
+        Cart = Cart.filter((ele) => {
+          return ele.id !== product.id
+        })
+        localStorage.setItem("cart", JSON.stringify(Cart))
+        DisplayProduct()
+        window.location.href = "./productpage.html"
       });
+      Increment.addEventListener("click", () => {
+        product = product.quantity++
+        localStorage.setItem("cart", JSON.stringify(Cart))
+        DisplayProduct()
+      });
+      Decrement.addEventListener("click", () => {
+        if (product.quantity > 1) {
+          product = product.quantity--
+          localStorage.setItem("cart", JSON.stringify(Cart))
+          DisplayProduct()
+        }
+      });
+      card.append(image, brand, price, details, category, Increment, quantity, Decrement, SelectedAnather);
+      Container.append(card);
+    });
 
-      let sum = 0
-      for (let i = 0; i < Cart.length; i++) {
-        sum += Cart[i].price * Cart[i].quantity
-      }
-      total.textContent = sum
-
+    var sum = 0
+    for (let i = 0; i < Cart.length; i++) {
+      sum += Cart[i].price * Cart[i].quantity
     }
-    DisplayProduct()
+    total.textContent = sum
+    price = sum
+
+  }
+  DisplayProduct()
+  let total = document.getElementById("total_price")
+  console.log(price)
+  function verifyOrder(data) {
+    const options = {
+      key: "rzp_test_bph3KzdDTlSvde",
+      amount: Number(data.amount),
+      currency: data.currency,
+      order_id: data.id,
+      name: "Travelocity Clone", //
+      description: "MY WEBSITE", //
+      handler: function (response) {
+        console.log(response, "56");
+        fetch("http://localhost:4444/verify", {
+          method: 'POST',
+          headers: {
+            "Content-type": "application/json"
+          },
+          body: JSON.stringify({ response: response })
+        })
+          .then(res => res.json())
+          .then(data => {
+            console.log(data)
+            // verifyOrder(data.data);
+            setTimeout(() => {
+              window.location.href = "./index.html";
+
+            }, 2000);
+
+          })
+      },
+    }
+    const rzp = new window.Razorpay(options);
+    rzp.open();
+
+  }
+  total.addEventListener("click", () => {
+    fetch("http://localhost:4444/orders", {
+      method: 'POST',
+      headers: {
+        "Content-type": "application/json"
+      },
+      body: JSON.stringify({ amount: price })
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data)
+        verifyOrder(data.data);
+      })
+
+  })
 
 
 
 
-
-  </script>
+</script>
 
 </html>

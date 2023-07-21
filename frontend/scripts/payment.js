@@ -59,7 +59,7 @@ let redirect = document.getElementById("redirect")
 placeOrder.addEventListener("click",()=>{
   Swal.fire({
     title: 'Congratulations!',
-    text: 'Your Order has been placed Successfully',
+    text: 'Your Room has been Booked  ',
     icon: 'success',
     
   });
