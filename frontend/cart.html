@@ -223,7 +223,7 @@
       description: "MY WEBSITE", //
       handler: function (response) {
         console.log(response, "56");
-        fetch("http://localhost:4444/verify", {
+        fetch("https://travelocity-backend.onrender.com/verify", {
           method: 'POST',
           headers: {
             "Content-type": "application/json"
@@ -247,7 +247,7 @@
 
   }
   total.addEventListener("click", () => {
-    fetch("http://localhost:4444/orders", {
+    fetch("https://travelocity-backend.onrender.com/orders", {
       method: 'POST',
       headers: {
         "Content-type": "application/json"

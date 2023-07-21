@@ -45,7 +45,7 @@ function signup() {
     password: signUp.password.value,
     mobile: signUp.mobile.value
   };
-  fetch(`http://localhost:4444/user/register`, {
+  fetch(`https://travelocity-backend.onrender.com/user/register`, {
     method: "POST",
     body: JSON.stringify(userObj),
     headers: {
@@ -77,7 +77,7 @@ myform.addEventListener("submit", (e) => {
   }
   console.log(obj)
 
-  fetch("http://localhost:4444/user/login", {
+  fetch("https://travelocity-backend.onrender.com/user/login", {
     method: 'POST',
     headers: {
       "Content-type": "application/json"
